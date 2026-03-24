@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold" href="/">🚀 Smart Portal</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav gap-3 align-items-center">
+
+        <li class="nav-item">
+          <a class="nav-link <%= currentRoute === '/' ? 'active-link' : '' %>" href="/">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link <%= currentRoute === '/register' ? 'active-link' : '' %>" href="/register">Register</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link <%= currentRoute === '/feedback' ? 'active-link' : '' %>" href="/feedback">Feedback</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link <%= currentRoute === '/about' ? 'active-link' : '' %>" href="/about">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn btn-primary px-3 py-2 <%= currentRoute === '/contact' ? 'active-btn' : '' %>" href="/contact">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>

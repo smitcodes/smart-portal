@@ -1,0 +1,47 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+<div class="container mt-5">
+
+    <div class="card shadow-lg p-5 text-center border-0" style="border-radius: 12px;">
+        <h2 class="text-success mb-3">🙏 Thank You, <%= name %>!</h2>
+
+        <p class="text-muted">Your feedback has been recorded successfully.</p>
+
+        <div class="text-start mx-auto mt-4" style="max-width: 400px;">
+            <p><strong>Email:</strong> <%= email %></p>
+
+            <!-- ⭐ Star Rating Display -->
+            <p class="mb-2"><strong>Rating:</strong></p>
+            <div class="mb-3">
+                <% for(let i = 1; i <= 5; i++) { %>
+                    <% if(i <= rating) { %>
+                        <span class="star filled">★</span>
+                    <% } else { %>
+                        <span class="star">★</span>
+                    <% } %>
+                <% } %>
+                <span class="ms-2 text-muted">(<%= rating %>/5)</span>
+            </div>
+
+            <p><strong>Comments:</strong> <%= comments %></p>
+        </div>
+
+        <a href="/feedback" class="btn btn-success mt-3 px-4">Give Another Feedback</a>
+    </div>
+
+</div>
+
+<%- include('../partials/footer') %>
+
+<!-- ⭐ Star Display Styling -->
+<style>
+.star {
+  font-size: 24px;
+  color: #ccc;
+}
+
+.star.filled {
+  color: gold;
+}
+</style>

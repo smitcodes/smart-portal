@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+<div class="container mt-5">
+    <h2>Student Registration</h2>
+
+    <form action="/submit" method="POST" class="mt-3">
+        <input class="form-control mb-2" type="text" name="name" placeholder="Name">
+        <input class="form-control mb-2" type="email" name="email" placeholder="Email">
+
+        <select class="form-control mb-2" name="course">
+            <option>Full Stack Development</option>
+            <option>Data Science</option>
+        </select>
+
+        <input class="form-control mb-2" type="number" name="age" placeholder="Age">
+
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<%- include('../partials/footer') %>

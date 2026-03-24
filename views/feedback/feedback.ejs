@@ -1,0 +1,86 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Feedback Form</h2>
+
+    <form action="/submit-feedback" method="POST">
+
+        <!-- Name -->
+        <input class="form-control mb-3" type="text" name="name" placeholder="Name" required>
+
+        <!-- Email -->
+        <input class="form-control mb-3" type="email" name="email" placeholder="Email" required>
+
+        <!-- Rating Box -->
+        <div class="card p-3 shadow-sm mb-4 border-0" style="max-width: 420px;">
+            <div class="d-flex align-items-center justify-content-between">
+
+                <label class="fw-semibold mb-0">Rate Your Experience:</label>
+
+                <div class="star-rating">
+                    <input type="radio" name="rating" id="star5" value="5" required>
+                    <label for="star5">★</label>
+
+                    <input type="radio" name="rating" id="star4" value="4">
+                    <label for="star4">★</label>
+
+                    <input type="radio" name="rating" id="star3" value="3">
+                    <label for="star3">★</label>
+
+                    <input type="radio" name="rating" id="star2" value="2">
+                    <label for="star2">★</label>
+
+                    <input type="radio" name="rating" id="star1" value="1">
+                    <label for="star1">★</label>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Comments -->
+        <textarea class="form-control mb-3" name="comments" placeholder="Comments..." rows="3" required></textarea>
+
+        <!-- Submit Button -->
+        <button class="btn btn-success px-4">Submit</button>
+
+    </form>
+</div>
+
+<%- include('../partials/footer') %>
+
+<!-- ⭐ Star Rating Styles -->
+<style>
+.star-rating {
+  direction: rtl;
+  display: inline-flex;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 28px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+  margin: 0 2px;
+}
+
+/* Hover effect */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: gold;
+}
+
+/* Selected stars */
+.star-rating input:checked ~ label {
+  color: gold;
+}
+
+/* Card styling */
+.card {
+  border-radius: 12px;
+}
+</style>

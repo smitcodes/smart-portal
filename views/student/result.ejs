@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+<div class="container mt-5">
+
+    <div class="card shadow-lg p-5 text-center">
+        <h2 class="text-success mb-4">🎉 Registration Successful</h2>
+
+        <div class="text-start mx-auto" style="max-width: 400px;">
+            <p><strong>Name:</strong> <%= name %></p>
+            <p><strong>Email:</strong> <%= email %></p>
+            <p><strong>Course:</strong> <%= course %></p>
+            <p><strong>Age:</strong> <%= age %></p>
+        </div>
+
+        <a href="/register" class="btn btn-primary mt-3">Register Another</a>
+    </div>
+
+</div>
+
+<%- include('../partials/footer') %>
